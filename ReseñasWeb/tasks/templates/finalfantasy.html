@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <style>
+        .img{
+            border-radius: 1%;
+            float: left;
+
+        }
+        h1{
+            margin-top: 1%;
+            margin-bottom: 3%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        main div div p{
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-style: oblique;
+            font-size: 100%;
+        }
+    </style>
+    <main class="container row-cols-auto">
+        <div class="text-center">
+            <h1><U>Final Fantasy XI</U></h1>
+            <img class="img" src="{% static 'images/FFX.jpg' %}" alt="" width="50%" height="50%">
+            <div class="card card-body">
+                <p>
+                    Final Fantasy XI es un juego de rol multijugador masivo en línea (MMORPG) desarrollado y publicado por Square Enix en 2002. El juego se desarrolla en el mundo de Vana'diel, donde los jugadores crean un personaje y se aventuran en misiones y batallas épicas en un mundo lleno de criaturas mágicas y peligrosas.
+
+                    Los jugadores pueden unirse a otros en grupos para completar misiones juntos, así como formar guilds y establecer relaciones con otros jugadores en el juego. El juego también cuenta con un sistema de trabajo, donde los personajes pueden aprender habilidades y roles específicos para ayudar en la batalla y la economía del juego.
+
+                    Final Fantasy XI es conocido por su difícil curva de aprendizaje y el tiempo que requiere para progresar. El juego también ha pasado por varias actualizaciones y expansiones en los últimos años, pero sigue siendo un juego popular para los fanáticos de la serie Final Fantasy y los MMORPG en general.
+                </p>
+            </div> 
+        </div>
+    </main>
+    {% endblock %}
+</body>
+</html>
