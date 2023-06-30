@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'ReseñasWeb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ComentariosWeb',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
@@ -117,7 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 import os 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'templates/static/css'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'tasks/static/css'),]
 
 LOGIN_URL = '/signin'
 # Default primary key field type

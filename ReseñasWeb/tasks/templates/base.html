@@ -9,18 +9,20 @@
     <title>Base</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
           <a class="" href="/"><img src="{% static 'images/NextGenL.png' %}" alt="" width="100px" height="100px"></a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li><a class="nav-link active" href="/"><strong><u>Home</u></strong></a></li>
-                {% if user.is_authenticated %}
-                <li class="nav-item"><a class="nav-link" href="/logout"><strong>Logout</strong></a></li>
-                {% else %}
-                <li class="nav-item"><a class="nav-link" href="/signup"><strong>Signup</strong></a></li>
-                <li class="nav-item"><a class="nav-link" href="/signin"><strong>Signin</strong></a></li>
-                {% endif %}
+              {% if request.session.user %}
+              <li class="nav-item"><a class="nav-link" href="/profile"><strong>Profile</strong></a></li>
+              <li class="nav-item"><a class="nav-link" href="/profile/settings"><strong>Settings</strong></a></li>
+              <hr>
+              <li class="nav-item"><a class="nav-link" href="/logout"><strong>Logout</strong></a></li>
+              {% else %}
+              <li class="nav-item"><a class="nav-link" href="/signup"><strong>Signup</strong></a></li>
+              <li class="nav-item"><a class="nav-link" href="/signin"><strong>Signin</strong></a></li>
+              {% endif %}
             </ul>
           </div>
         </div>
